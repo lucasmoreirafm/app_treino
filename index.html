@@ -21,9 +21,52 @@
 <script src="treino.js"></script>
 <script src="app.js"></script>
 <script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
-}
+  // ===========================
+  // Service Worker PWA
+  // ===========================
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('Service Worker registrado com sucesso!'))
+      .catch(err => console.log('Falha ao registrar Service Worker:', err));
+  }
+
+  // ===========================
+  // Função para renderizar cards com classes CSS
+  // ===========================
+  function renderExercicios(treinoDia) {
+    const container = document.getElementById('exercicios');
+    container.innerHTML = '';
+
+    treinoDia.forEach(ex => {
+      const card = document.createElement('div');
+      card.className = 'stContainer'; // classe do CSS
+
+      // Conteúdo do card
+      card.innerHTML = `
+        <h3>${ex.nome}</h3>
+        <div class="stMarkdown">
+          <p><strong>Músculo:</strong> ${ex.musculo} — 
+          <strong>Séries:</strong> ${ex.series} — 
+          <strong>Descanso:</strong> ${ex.descanso}</p>
+        </div>
+        <div class="stCheckbox">
+          <label><input type="checkbox"> Concluído</label>
+        </div>
+        ${ex.gif ? `<div class="stButton"><button onclick="window.open('${ex.gif}','_blank')">🔗 GIF</button></div>` : ''}
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  // ===========================
+  // Exemplo: renderizar segunda-feira
+  // ===========================
+  // Troque por sua lógica de dia atual
+  if (window.treino && window.treino['Segunda']) {
+    renderExercicios(window.treino['Segunda']);
+  }
 </script>
+
 </body>
 </html>
+
