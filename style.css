@@ -1,0 +1,123 @@
+/* ===========================
+   Estilo Global
+=========================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F9F9;
+    color: #2E4053;
+}
+
+/* ===========================
+   Cabeçalho
+=========================== */
+header, .stApp > div:first-child {
+    background-color: #5DADE2;
+    color: #fff;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* ===========================
+   Cards de Exercício
+=========================== */
+.stContainer {
+    background-color: #ECF0F1;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 12px 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border-left: 4px solid #2980B9;
+    transition: transform 0.2s;
+}
+
+.stContainer:hover {
+    transform: translateY(-2px);
+}
+
+/* Título do exercício */
+.stContainer h3, .stContainer .markdown-text-container h3 {
+    color: #2E4053;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+/* Detalhes do exercício */
+.stContainer .stMarkdown {
+    color: #7F8C8D;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Checkbox de concluído */
+.stCheckbox > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Botão de GIF/Demonstração */
+.stButton button {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.stButton button:hover {
+    background-color: #2980B9;
+}
+
+/* ===========================
+   Barras de progresso
+=========================== */
+.barra-container {
+    background-color: #D5D8DC;
+    border-radius: 12px;
+    height: 10px;
+    width: 100%;
+    margin: 6px 0;
+    overflow: hidden;
+}
+
+.barra-progresso {
+    background-color: #3498DB;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 12px;
+}
+
+/* ===========================
+   Responsividade mobile
+=========================== */
+@media (max-width: 600px) {
+    header, .stContainer {
+        margin: 8px;
+        padding: 12px;
+    }
+
+    .stContainer h3 {
+        font-size: 15px;
+    }
+
+    .stContainer .stMarkdown {
+        font-size: 13px;
+    }
+
+    .stButton button {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
