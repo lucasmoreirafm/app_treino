@@ -12,10 +12,10 @@ body {
    Cabeçalho
 =========================== */
 header, .stApp > div:first-child {
-    background-color: #5DADE2;
+    background-color: #426d8a;
     color: #fff;
     padding: 16px 20px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
