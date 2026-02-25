@@ -57,4 +57,4 @@ const treino = {
 ],
 
 "Domingo": []
-
+}
