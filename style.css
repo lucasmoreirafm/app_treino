@@ -1,111 +1,116 @@
 /* ===========================
-   Estilo Global
+   Estilo Global (Dark)
 =========================== */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F8F9F9;
-    color: #2E4053;
+    background-color: #0F172A;
+    color: #E2E8F0;
 }
 
 /* ===========================
    Cabeçalho
 =========================== */
 header, .stApp > div:first-child {
-    background-color: #426d8a;
-    color: #fff;
+    background: linear-gradient(90deg, #1E293B, #0F172A);
+    color: #F1F5F9;
     padding: 16px 20px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-bottom: 1px solid #334155;
 }
 
 /* ===========================
    Cards de Exercício
 =========================== */
 .stContainer {
-    background-color: #ECF0F1;
-    border-radius: 12px;
-    padding: 16px;
-    margin: 12px 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    border-left: 4px solid #2980B9;
-    transition: transform 0.2s;
+    background-color: #1E293B;
+    border-radius: 14px;
+    padding: 18px;
+    margin: 14px 16px;
+    border: 1px solid #334155;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+    transition: all 0.2s ease;
 }
 
 .stContainer:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: #3B82F6;
 }
 
 /* Título do exercício */
-.stContainer h3, .stContainer .markdown-text-container h3 {
-    color: #2E4053;
+.stContainer h3, 
+.stContainer .markdown-text-container h3 {
+    color: #F1F5F9;
     font-size: 16px;
     margin-bottom: 6px;
 }
 
 /* Detalhes do exercício */
 .stContainer .stMarkdown {
-    color: #7F8C8D;
+    color: #94A3B8;
     font-size: 14px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-/* Checkbox de concluído */
+/* ===========================
+   Checkbox
+=========================== */
 .stCheckbox > div {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 }
 
-/* Botão de GIF/Demonstração */
+/* ===========================
+   Botão de GIF/Demonstração
+=========================== */
 .stButton button {
-    background-color: #3498DB;
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
     color: white;
     border: none;
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 14px;
+    border-radius: 10px;
+    padding: 6px 14px;
+    font-size: 13px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s ease;
 }
 
 .stButton button:hover {
-    background-color: #2980B9;
+    background: linear-gradient(135deg, #2563EB, #1D4ED8);
+    transform: scale(1.03);
 }
 
 /* ===========================
    Barras de progresso
 =========================== */
 .barra-container {
-    background-color: #D5D8DC;
-    border-radius: 12px;
-    height: 10px;
+    background-color: #1E293B;
+    border-radius: 10px;
+    height: 8px;
     width: 100%;
-    margin: 6px 0;
+    margin: 8px 0;
     overflow: hidden;
+    border: 1px solid #334155;
 }
 
 .barra-progresso {
-    background-color: #3498DB;
+    background: linear-gradient(90deg, #22C55E, #4ADE80);
     height: 100%;
     width: 0%;
-    transition: width 0.3s ease;
-    border-radius: 12px;
+    transition: width 0.4s ease;
 }
 
 /* ===========================
    Responsividade mobile
 =========================== */
 @media (max-width: 600px) {
+
     header, .stContainer {
-        margin: 8px;
-        padding: 12px;
+        margin: 10px;
+        padding: 14px;
     }
 
     .stContainer h3 {
@@ -117,7 +122,7 @@ header, .stApp > div:first-child {
     }
 
     .stButton button {
-        font-size: 13px;
+        font-size: 12px;
         padding: 5px 10px;
     }
 }
