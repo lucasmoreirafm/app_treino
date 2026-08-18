@@ -1,128 +1,251 @@
 /* ===========================
-   Estilo Global (Dark)
+   Variáveis e Reset
 =========================== */
+:root {
+  --bg-main: #0B0F17;
+  --bg-card: #161F30;
+  --bg-card-done: #0F172A;
+  --border-color: #233148;
+  --accent-primary: linear-gradient(135deg, #3B82F6, #2563EB);
+  --accent-green: linear-gradient(90deg, #10B981, #34D399);
+  --text-main: #F1F5F9;
+  --text-muted: #94A3B8;
+  --text-dimmed: #64748B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0F172A;
-    color: #E2E8F0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding-bottom: 40px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ===========================
-   Cabeçalho
+   Navegação de Dias (Sticky Tabs)
 =========================== */
-header, .stApp > div:first-child {
-    background: linear-gradient(90deg, #1E293B, #0F172A);
-    color: #F1F5F9;
-    padding: 16px 20px;
-    font-size: 15px;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #334155;
+.header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(11, 15, 23, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs-dias {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  padding-bottom: 2px;
+}
+
+.tabs-dias::-webkit-scrollbar {
+  display: none; /* Chrome / Safari */
+}
+
+.tab-btn {
+  background: #1E293B;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+  border-color: #3B82F6;
+}
+
+.tab-btn.active {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+/* ===========================
+   Container Principal e Progresso
+=========================== */
+.main-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.progresso-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.progresso-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.barra-container {
+  background-color: #0F172A;
+  border-radius: 9999px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.barra-progresso {
+  background: var(--accent-green);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
 }
 
 /* ===========================
    Cards de Exercício
 =========================== */
-.stContainer {
-    background-color: #1E293B;
-    border-radius: 14px;
-    padding: 18px;
-    margin: 14px 16px;
-    border: 1px solid #334155;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-    transition: all 0.2s ease;
+.exercicios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.stContainer:hover {
-    transform: translateY(-3px);
-    border-color: #3B82F6;
+.card-exercicio {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
-/* Título do exercício */
-.stContainer h3, 
-.stContainer .markdown-text-container h3 {
-    color: #F1F5F9;
-    font-size: 16px;
-    margin-bottom: 6px;
+.card-exercicio:hover {
+  border-color: #334155;
 }
 
-/* Detalhes do exercício */
-.stContainer .stMarkdown {
-    color: #94A3B8;
-    font-size: 14px;
-    margin-bottom: 10px;
+/* Estado de Exercício Concluído */
+.card-exercicio.concluido {
+  background-color: var(--bg-card-done);
+  border-color: rgba(16, 185, 129, 0.2);
+  opacity: 0.65;
 }
 
-/* ===========================
-   Checkbox
-=========================== */
-.stCheckbox > div {
-    display: flex;
-    align-items: center;
+.card-exercicio.concluido .ex-titulo {
+  text-decoration: line-through;
+  color: var(--text-dimmed);
 }
 
-/* ===========================
-   Botão de GIF/Demonstração
-=========================== */
-.stButton button {
-    background: linear-gradient(135deg, #3B82F6, #2563EB);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 6px 14px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+/* Checkbox Estilizado */
+.custom-checkbox {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  background: transparent;
 }
 
-.stButton button:hover {
-    background: linear-gradient(135deg, #2563EB, #1D4ED8);
-    transform: scale(1.03);
+.card-exercicio.concluido .custom-checkbox {
+  background: #10B981;
+  border-color: #10B981;
 }
 
-/* ===========================
-   Barras de progresso
-=========================== */
-.barra-container {
-    background-color: #1E293B;
-    border-radius: 10px;
-    height: 8px;
-    width: 100%;
-    margin: 8px 0;
-    overflow: hidden;
-    border: 1px solid #334155;
+.custom-checkbox::after {
+  content: "✓";
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: none;
 }
 
-.barra-progresso {
-    background: linear-gradient(90deg, #22C55E, #4ADE80);
-    height: 100%;
-    width: 0%;
-    transition: width 0.4s ease;
+.card-exercicio.concluido .custom-checkbox::after {
+  display: block;
 }
 
-/* ===========================
-   Responsividade mobile
-=========================== */
-@media (max-width: 600px) {
+/* Conteúdo do Card */
+.ex-detalhes {
+  flex-grow: 1;
+}
 
-    header, .stContainer {
-        margin: 10px;
-        padding: 14px;
-    }
+.ex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
 
-    .stContainer h3 {
-        font-size: 15px;
-    }
+.ex-titulo {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+}
 
-    .stContainer .stMarkdown {
-        font-size: 13px;
-    }
+.ex-gif-btn {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60A5FA;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
 
-    .stButton button {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
+.ex-gif-btn:hover {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+/* Badges de Informações */
+.ex-info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background-color: #0F172A;
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tag.highlight {
+  color: #38BDF8;
+  background-color: rgba(56, 189, 248, 0.1);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-dimmed);
+  font-size: 15px;
 }
