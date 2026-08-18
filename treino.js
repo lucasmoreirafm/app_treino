@@ -1,67 +1,70 @@
 const treino = {
   "Segunda": [
-    {"nome":"Supino reto barra (Top Set + Back Off)","musculo":"Peito","series":3,"descanso":"02:30"},
-    {"nome":"Supino inclinado halteres","musculo":"Peitoral Superior","series":4,"descanso":"02:00"},
-    {"nome":"Chest Press convergente","musculo":"Peito","series":3,"descanso":"01:30"},
-    {"nome":"Crossover polia baixa","musculo":"Peitoral Superior","series":3,"descanso":"01:00","tecnica":"Drop Set"},
-    {"nome":"Elevação lateral polia unilateral","musculo":"Deltoide Lateral","series":4,"descanso":"01:00"},
-    {"nome":"Tríceps corda acima da cabeça","musculo":"Cabeça Longa","series":4,"descanso":"01:00","tecnica":"Rest Pause"},
-    {"nome":"Tríceps pulley barra","musculo":"Tríceps","series":3,"descanso":"01:00"},
-    {"nome":"Abdominal cabo","musculo":"Core","series":4,"descanso":"01:00"}
+    {"nome": "Supino reto barra", "musculo": "Peito", "series": 4, "repeticoes": "6-8", "descanso": "02:30", "RIR": "1-2"},
+    {"nome": "Supino inclinado Smith", "musculo": "Peito superior", "series": 3, "repeticoes": "8-10", "descanso": "02:00", "RIR": "1"},
+    {"nome": "Chest Press", "musculo": "Peito", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "0-1"},
+    {"nome": "Crucifixo máquina", "musculo": "Peito", "series": 2, "repeticoes": "12-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Agachamento livre", "musculo": "Quadríceps/Glúteos", "series": 4, "repeticoes": "6-8", "descanso": "02:30", "RIR": "1-2"},
+    {"nome": "Leg Press", "musculo": "Quadríceps", "series": 3, "repeticoes": "8-12", "descanso": "02:00", "RIR": "1"},
+    {"nome": "Tríceps corda acima da cabeça", "musculo": "Tríceps", "series": 3, "repeticoes": "8-12", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Tríceps pulley barra", "musculo": "Tríceps", "series": 3, "repeticoes": "8-12", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Elevação lateral", "musculo": "Ombro lateral", "series": 3, "repeticoes": "12-20", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Abdominal no cabo", "musculo": "Abdômen", "series": 3, "repeticoes": "10-15", "descanso": "01:00", "RIR": "1"}
   ],
 
-  "Terça":[
-    {"nome":"Barra fixa pronada","musculo":"Costas","series":4,"descanso":"02:00"},
-    {"nome":"Pulldown articulado","musculo":"Costas","series":3,"descanso":"01:30"},
-    {"nome":"Remada unilateral máquina","musculo":"Costas","series":3,"descanso":"01:30"},
-    {"nome":"Encolhimento barra","musculo":"Trapézio","series":4,"descanso":"01:30"},
-    {"nome":"Rosca Scott","musculo":"Bíceps","series":4,"descanso":"01:30"},
-    {"nome":"Rosca Martelo polia","musculo":"Braquial","series":4,"descanso":"01:00","tecnica":"Drop Set"},
-    {"nome":"Rosca inversa barra","musculo":"Antebraço","series":3,"descanso":"01:00"},
-    {"nome":"Wrist Curl","musculo":"Antebraço","series":3,"descanso":"01:00"}
+  "Terça": [
+    {"nome": "Barra fixa ou Pulldown pesado", "musculo": "Costas", "series": 4, "repeticoes": "6-10", "descanso": "02:00", "RIR": "1-2"},
+    {"nome": "Remada curvada barra", "musculo": "Costas", "series": 3, "repeticoes": "6-10", "descanso": "02:30", "RIR": "1-2"},
+    {"nome": "Remada unilateral", "musculo": "Costas", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "1"},
+    {"nome": "Stiff barra", "musculo": "Posterior de coxa/Glúteos", "series": 4, "repeticoes": "6-10", "descanso": "02:30", "RIR": "1-2"},
+    {"nome": "Mesa flexora", "musculo": "Posterior de coxa", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "0-1"},
+    {"nome": "Encolhimento barra", "musculo": "Trapézio", "series": 4, "repeticoes": "8-12", "descanso": "01:30", "RIR": "1"},
+    {"nome": "Rosca Scott", "musculo": "Bíceps", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "0-1"},
+    {"nome": "Rosca martelo na polia", "musculo": "Bíceps/Braquial/Braquiorradial", "series": 3, "repeticoes": "10-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Rosca inversa", "musculo": "Antebraço/Braquial", "series": 2, "repeticoes": "10-15", "descanso": "01:00", "RIR": "0-1"}
   ],
 
-  "Quarta":[
-    {"nome":"Levantamento Terra","musculo":"Posterior","series":3,"descanso":"02:30"},
-    {"nome":"Agachamento Livre","musculo":"Quadríceps","series":4,"descanso":"02:30"},
-    {"nome":"Stiff Barra","musculo":"Posterior","series":4,"descanso":"02:00"},
-    {"nome":"Mesa Flexora","musculo":"Posterior","series":4,"descanso":"01:30","tecnica":"Drop Set"},
-    {"nome":"Leg Press","musculo":"Quadríceps","series":3,"descanso":"02:00"},
-    {"nome":"Panturrilha em pé","musculo":"Panturrilha","series":5,"descanso":"01:00"},
-    {"nome":"Prancha","musculo":"Core","series":3,"descanso":"01:00"}
+  "Quarta": [
+    {"nome": "Agachamento frontal", "musculo": "Quadríceps", "series": 3, "repeticoes": "6-10", "descanso": "02:30", "RIR": "1-2"},
+    {"nome": "Leg Press", "musculo": "Quadríceps/Glúteos", "series": 3, "repeticoes": "10-15", "descanso": "02:00", "RIR": "1"},
+    {"nome": "Stiff com halteres", "musculo": "Posterior de coxa", "series": 3, "repeticoes": "8-12", "descanso": "02:00", "RIR": "1"},
+    {"nome": "Mesa flexora unilateral", "musculo": "Posterior de coxa", "series": 3, "repeticoes": "10-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Cadeira extensora", "musculo": "Quadríceps", "series": 2, "repeticoes": "12-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Desenvolvimento halteres", "musculo": "Ombros", "series": 3, "repeticoes": "6-10", "descanso": "02:00", "RIR": "1-2"},
+    {"nome": "Elevação lateral polia", "musculo": "Ombro lateral", "series": 4, "repeticoes": "12-20", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Crucifixo inverso", "musculo": "Ombro posterior", "series": 3, "repeticoes": "12-20", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Panturrilha sentado", "musculo": "Panturrilha", "series": 4, "repeticoes": "10-15", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Abdominal infra", "musculo": "Abdômen", "series": 3, "repeticoes": "10-15", "descanso": "01:00", "RIR": "1"}
   ],
 
-  "Quinta":[
-    {"nome":"Supino Inclinado Smith","musculo":"Peitoral Superior","series":4,"descanso":"02:00"},
-    {"nome":"Chest Press Inclinado","musculo":"Peito","series":3,"descanso":"01:30","tecnica":"Rest Pause"},
-    {"nome":"Crucifixo Máquina","musculo":"Peito","series":3,"descanso":"01:00"},
-    {"nome":"Elevação Lateral Halteres","musculo":"Deltoide Lateral","series":4,"descanso":"01:00"},
-    {"nome":"Crucifixo Inverso","musculo":"Posterior Ombro","series":4,"descanso":"01:00","tecnica":"Drop Set"},
-    {"nome":"Rosca Concentrada","musculo":"Bíceps","series":3,"descanso":"01:00"},
-    {"nome":"Tríceps Corda acima da cabeça","musculo":"Cabeça Longa","series":3,"descanso":"01:00"},
-    {"nome":"Face Pull","musculo":"Trapézio/Ombro","series":3,"descanso":"01:00"}
+  "Quinta": [
+    {"nome": "Supino inclinado Smith", "musculo": "Peito superior", "series": 4, "repeticoes": "6-10", "descanso": "02:00", "RIR": "1"},
+    {"nome": "Chest Press", "musculo": "Peito", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "0-1"},
+    {"nome": "Crossover", "musculo": "Peito", "series": 3, "repeticoes": "12-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Elevação lateral", "musculo": "Ombro lateral", "series": 4, "repeticoes": "12-20", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Crucifixo inverso", "musculo": "Ombro posterior", "series": 3, "repeticoes": "12-20", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Rosca direta barra", "musculo": "Bíceps", "series": 3, "repeticoes": "6-10", "descanso": "01:30", "RIR": "1"},
+    {"nome": "Rosca concentrada", "musculo": "Bíceps", "series": 3, "repeticoes": "10-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Tríceps pulley", "musculo": "Tríceps", "series": 3, "repeticoes": "8-12", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Tríceps corda acima da cabeça", "musculo": "Tríceps", "series": 3, "repeticoes": "10-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Abdominal no cabo", "musculo": "Abdômen", "series": 3, "repeticoes": "10-15", "descanso": "01:00", "RIR": "1"}
   ],
 
-  "Sexta":[
-    {"nome":"Remada Curvada Barra","musculo":"Costas","series":4,"descanso":"02:00"},
-    {"nome":"Remada Máquina Neutra","musculo":"Costas","series":3,"descanso":"01:30"},
-    {"nome":"Pullover Polia","musculo":"Costas","series":3,"descanso":"01:00"},
-    {"nome":"High Pull","musculo":"Trapézio","series":4,"descanso":"01:30"},
-    {"nome":"Crucifixo Inverso","musculo":"Posterior Ombro","series":3,"descanso":"01:00"},
-    {"nome":"Elevação Lateral Polia","musculo":"Deltoide Lateral","series":3,"descanso":"01:00"},
-    {"nome":"Abdominal Infra Suspenso","musculo":"Core","series":4,"descanso":"01:00"}
+  "Sexta": [
+    {"nome": "Pulldown pesado", "musculo": "Costas", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "1"},
+    {"nome": "Remada máquina pesada", "musculo": "Costas", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "1"},
+    {"nome": "Pullover na polia", "musculo": "Dorsal", "series": 2, "repeticoes": "12-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Elevação lateral polia", "musculo": "Ombro lateral", "series": 3, "repeticoes": "12-20", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Encolhimento barra", "musculo": "Trapézio", "series": 3, "repeticoes": "8-12", "descanso": "01:30", "RIR": "1"},
+    {"nome": "Rosca martelo", "musculo": "Bíceps/Braquial", "series": 3, "repeticoes": "8-12", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Rosca Scott", "musculo": "Bíceps", "series": 3, "repeticoes": "10-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Tríceps pulley barra", "musculo": "Tríceps", "series": 3, "repeticoes": "8-12", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Tríceps corda acima da cabeça", "musculo": "Tríceps", "series": 3, "repeticoes": "10-15", "descanso": "01:15", "RIR": "0-1"},
+    {"nome": "Rosca inversa", "musculo": "Antebraço/Braquial", "series": 2, "repeticoes": "12-15", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Wrist curl", "musculo": "Antebraço", "series": 3, "repeticoes": "15-20", "descanso": "01:00", "RIR": "0-1"},
+    {"nome": "Panturrilha em pé", "musculo": "Panturrilha", "series": 4, "repeticoes": "10-15", "descanso": "01:00", "RIR": "0-1"}
   ],
 
-  "Sábado":[
-    {"nome":"Rosca Scott Unilateral","musculo":"Bíceps","series":4,"descanso":"01:00","tecnica":"Drop Set"},
-    {"nome":"Rosca Martelo Polia","musculo":"Braquial","series":4,"descanso":"01:00"},
-    {"nome":"Tríceps Pulley Barra","musculo":"Tríceps","series":4,"descanso":"01:00"},
-    {"nome":"Tríceps Corda acima da cabeça","musculo":"Cabeça Longa","series":4,"descanso":"01:00","tecnica":"Rest Pause"},
-    {"nome":"Agachamento Frontal","musculo":"Quadríceps","series":3,"descanso":"02:00"},
-    {"nome":"Mesa Flexora Unilateral","musculo":"Posterior","series":3,"descanso":"01:30"},
-    {"nome":"Panturrilha Sentado","musculo":"Panturrilha","series":5,"descanso":"01:00"},
-    {"nome":"Abdominal Cabo","musculo":"Core","series":4,"descanso":"01:00"}
-  ],
-
-  "Domingo":[]
+  "Sábado": [],
+  "Domingo": []
 }
